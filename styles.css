@@ -1,0 +1,106 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --light-bg: #F6F8FF;
+    --card-bg-light: #FEFEFE;
+    --blue: #0079FF;
+    --light-txt-primary: #4B6A9B;
+    --light-txt-secondary: #697C9A;
+    --light-heading: #2B3442;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DOCUMENT */
+body {
+    height: 100vh;
+    background-color: var(--light-bg);
+    font-family: "Space Mono";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+}
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+.main-container {
+    margin: 31px auto;
+    width: 327px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+header .dark-btn {
+    display: flex;
+    align-items: center;
+    color: var(--light-heading);
+}
+header .dark-btn p {
+    margin-right: 14px;
+}
+.search-box {
+    background-color: var(--card-bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 7px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    -webkit-box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11); 
+    box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11);
+}
+.search-box svg{
+    margin: 9px 13px;
+    color: var(--blue);
+    width: 45px;
+}
+.search-box .search-input {
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-right: 7px;
+}
+.search-box .search-input::placeholder {
+    color: --light-txt-primary;
+}
+.search-box .search-btn {
+    padding: 12.5px 18px;
+    text-decoration: none; 
+    color: #FFFFFF;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+.user-container {
+    height: 517px;
+    background-color: var(--card-bg-light);
+    border-radius: 16px;
+    -webkit-box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11); 
+    box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11);
+}
