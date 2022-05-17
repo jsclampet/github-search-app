@@ -27,7 +27,7 @@ xhttp.onreadystatechange = function() {
        avatar.innerHTML = `<img src="${githubApi.avatar_url}">`;
        userName.textContent = `${githubApi.name}`;
        userTag.textContent = `@${githubApi.login}`;
-       joined.textContent = `Joined ${new Date().getDate(githubApi.created_at)} ${String(new Date(githubApi.created_at)).split(' ')[1]} ${new Date().getFullYear(githubApi.created_at)}`;
+       joined.textContent = `Joined ${new Date().getDate(githubApi.created_at)} ${String(new Date(githubApi.created_at)).split(' ')[1]} ${new Date(githubApi.created_at).getFullYear()}`;
 
        repoCount.textContent = githubApi.public_repos;
        followerCount.textContent = githubApi.followers;
