@@ -14,7 +14,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a {
+    text-decoration: none;
+}
 /* DOCUMENT */
 body {
     height: 100vh;
@@ -45,7 +47,7 @@ h4 {
     line-height: 20px;
 }
 .main-container {
-    margin: 31px auto;
+    margin: 31px auto 0;
     width: 327px;
 }
 
@@ -96,11 +98,59 @@ header .dark-btn p {
     background-color: var(--blue);
     border-radius: 10px;
 }
-
 .user-container {
     height: 517px;
     background-color: var(--card-bg-light);
     border-radius: 16px;
     -webkit-box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11); 
     box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11);
+    padding: 32px 24px 0;
+}
+.user-header {
+    display: flex;
+    margin-bottom: 33px;
+}
+.user-header #avatar {
+    margin-right: 19px;
+}
+.user-header #avatar img {
+    width: 70px;
+    border-radius: 100%;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+.user-container p {
+    font-size: 13px;
+    color: var(--light-txt-primary);
+}
+.follower-div {
+    padding: 18px 14px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--light-bg);
+    border-radius: 16px;
+    margin: 23px auto;
+}
+.follower-div p {
+    font-size: 11px;
+    line-height: 16px;
+}
+.follower-div h4 {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+.user-links div {
+    display: flex;
+    font-size: 13px;
+}
+.user-links svg {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.user-links .location {
+    margin-left: 4px;
 }
