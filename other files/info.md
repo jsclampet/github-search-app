@@ -87,3 +87,12 @@
 
 - To get user-entered text of input, you can user the value method on the object (object.value)
 
+- Use classes as UTILITY to make it easier to toggle between dark/light in JS
+
+- Different use-cases for JS property "classList", with different methods
+- - classList.toggle is extremely useful (on/off)
+- - classList.contains is extremely useful to check if js object/var/element contains a class by name 
+
+- querySelector() methodcan only be used to access a single element while querySelectorAll() method can be used to access all elements which match with a specified CSS selector (was having issue with light btn and dark btn with using just selector, since it selected only one (the first instance))
+- - However! querySelectorAll creates a 'nodeCollection', which is different and more limited than an Array. Therefore, could not use .forEach method, went with a basic forloop when creating event listener, and referenced each modeSwitch item via index (i)
+

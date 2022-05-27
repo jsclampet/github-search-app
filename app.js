@@ -54,29 +54,61 @@ searchBtn.addEventListener('click', ()=> {
 })
 
 const drkBtn = document.querySelector('.dark-btn');
+
 const drkBtnText = document.getElementById('dark-btn-text');
 
 const lightBtn = document.querySelector('.light-btn');
 const lightBtnText = document.querySelector('.light-btn-text');
 
 // Option to set app to DARK MODE
-drkBtn.addEventListener('click', () => {
-    drkBtn.style.display = 'none'
-    lightBtn.style.display = 'flex'
-    document.body.style.backgroundColor = '#141D2F';
-    document.querySelector('.follower-div').style.backgroundColor = '#141D2F';
-    document.querySelector('.search-box').style.backgroundColor = '#1E2A47'
-    document.querySelector('input').style.backgroundColor = '#1E2A47'
-    document.querySelector('input').style.color = '#ffffff'
-    document.querySelector('.user-container').style.backgroundColor = '#1E2A47'
-    document.querySelector('header').style.color = '#ffffff';
-})
+// drkBtn.addEventListener('click', () => {
+//     drkBtn.style.display = 'none'
+//     lightBtn.style.display = 'flex'
+//     document.body.style.backgroundColor = '#141D2F';
+//     document.querySelector('.follower-div').style.backgroundColor = '#141D2F';
+//     document.querySelector('.search-box').style.backgroundColor = '#1E2A47'
+//     document.querySelector('input').style.backgroundColor = '#1E2A47'
+//     document.querySelector('input').style.color = '#ffffff'
+//     document.querySelector('.user-container').style.backgroundColor = '#1E2A47'
+//     document.querySelector('header').style.color = '#ffffff';
+// })
 
-// Option to set app to LIGHT MODE
-lightBtn.addEventListener('click', () => {
-    lightBtn.style.display = 'none'
-    drkBtn.style.display = 'flex'
-})
+// // Option to set app to LIGHT MODE
+// lightBtn.addEventListener('click', () => {
+//     lightBtn.style.display = 'none'
+//     drkBtn.style.display = 'flex'
+// })
+const header = document.querySelector('header');
+const userBio = document.querySelector('#user-bio');
+const followerDiv = document.querySelector('.follower-div');
+const userLinks = document.querySelector('.user-links');
+const following = document.querySelector('.following');
+const txtColorArr = [header, searchInput, userBio, joined, userName, followerDiv, userLinks, following]
 
 
-console.log(drkBtn)
+const bgColorPrimaryArr = [document.querySelector('body'), followerDiv];
+
+const bgColorSecondaryArr = [document.querySelector('.user-container'), document.querySelector('.search-box'), searchInput];
+
+const modeSwitch = document.querySelectorAll('.mode-switch');
+
+for(let i=0; i < modeSwitch.length; i++) {
+    modeSwitch[i].addEventListener('click', () => {
+        for(let element of txtColorArr){
+            element.classList.toggle('dark-txt-primary');
+        }
+        bgColorPrimaryArr.forEach(item => item.classList.toggle('dark-txt-primary'));
+        bgColorSecondaryArr.forEach(item => item.classList.toggle('dark-bg-secondary'));
+        if(drkBtn.style.display !== 'none'){
+            drkBtn.style.display = 'none';
+            lightBtn.style.display = 'flex';
+            document.body.style.backgroundColor = '#141D2F';
+            document.querySelector('.follower-div').style.backgroundColor = '#141D2F';
+        } else if (drkBtn.style.display === 'none') {
+            lightBtn.style.display = 'none';
+            drkBtn.style.display = 'flex';
+            document.body.style.backgroundColor = 'var(--light-bg)';
+            document.querySelector('.follower-div').style.backgroundColor = 'var(--light-bg)';
+        }
+    })
+}

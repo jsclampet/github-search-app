@@ -132,11 +132,13 @@ header .light-btn p {
 .user-info {
     display: flex;
     flex-direction: column;
-}
-.user-container p {
     font-size: 13px;
     color: var(--light-txt-primary);
 }
+/* .user-container p {
+    font-size: 13px;
+    color: var(--light-txt-primary);
+} */
 .follower-div {
     padding: 18px 14px;
     width: 100%;
@@ -165,4 +167,18 @@ header .light-btn p {
 }
 .user-links .location {
     margin-left: 4px;
+}
+
+
+
+/* DARK MODE */
+
+.dark-txt-primary {
+    color: #ffffff;
+}
+.dark-bg-primary {
+    background-color:#141D2F;
+}
+.dark-bg-secondary {
+    background-color: #1F2A47;
 }
