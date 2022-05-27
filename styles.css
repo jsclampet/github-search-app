@@ -16,6 +16,7 @@
 }
 a {
     text-decoration: none;
+    color: var(--blue);
 }
 /* DOCUMENT */
 body {
@@ -61,7 +62,18 @@ header .dark-btn {
     align-items: center;
     color: var(--light-heading);
 }
+header .dark-btn:hover, .light-btn:hover {
+    cursor: pointer;
+}
 header .dark-btn p {
+    margin-right: 14px;
+}
+.light-btn {
+    display: none;
+    align-items: center;
+    color: #FFFFFF;
+}
+header .light-btn p {
     margin-right: 14px;
 }
 .search-box {

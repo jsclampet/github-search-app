@@ -52,3 +52,31 @@ searchBtn.addEventListener('click', ()=> {
     xhttp.open("GET", searchResult , true);
     xhttp.send();
 })
+
+const drkBtn = document.querySelector('.dark-btn');
+const drkBtnText = document.getElementById('dark-btn-text');
+
+const lightBtn = document.querySelector('.light-btn');
+const lightBtnText = document.querySelector('.light-btn-text');
+
+// Option to set app to DARK MODE
+drkBtn.addEventListener('click', () => {
+    drkBtn.style.display = 'none'
+    lightBtn.style.display = 'flex'
+    document.body.style.backgroundColor = '#141D2F';
+    document.querySelector('.follower-div').style.backgroundColor = '#141D2F';
+    document.querySelector('.search-box').style.backgroundColor = '#1E2A47'
+    document.querySelector('input').style.backgroundColor = '#1E2A47'
+    document.querySelector('input').style.color = '#ffffff'
+    document.querySelector('.user-container').style.backgroundColor = '#1E2A47'
+    document.querySelector('header').style.color = '#ffffff';
+})
+
+// Option to set app to LIGHT MODE
+lightBtn.addEventListener('click', () => {
+    lightBtn.style.display = 'none'
+    drkBtn.style.display = 'flex'
+})
+
+
+console.log(drkBtn)
