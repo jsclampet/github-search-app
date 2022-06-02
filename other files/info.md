@@ -96,3 +96,7 @@
 - querySelector() methodcan only be used to access a single element while querySelectorAll() method can be used to access all elements which match with a specified CSS selector (was having issue with light btn and dark btn with using just selector, since it selected only one (the first instance))
 - - However! querySelectorAll creates a 'nodeCollection', which is different and more limited than an Array. Therefore, could not use .forEach method, went with a basic forloop when creating event listener, and referenced each modeSwitch item via index (i)
 
+- Applied user order in order to switch up .user-info container 
+
+- {overflow: hidden} --- this CSS property got rid of the scroll bar and scrolling. Scrolling was most-likely due to {body: 100vh} AND margin-top from first child element
+

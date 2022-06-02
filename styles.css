@@ -26,6 +26,7 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
+    overflow: hidden;
 }
 h1 {
     font-weight: 700;
@@ -96,6 +97,7 @@ header .light-btn p {
 }
 .search-box .search-input {
     width: 100%;
+    height: 100%;
     outline: none;
     border: none;
     margin-right: 7px;
@@ -110,13 +112,19 @@ header .light-btn p {
     background-color: var(--blue);
     border-radius: 10px;
 }
+.search-box .search-input:hover {
+    cursor: pointer;
+}
+.search-box .no-result {
+    display: none;
+}
 .user-container {
     height: 517px;
     background-color: var(--card-bg-light);
     border-radius: 16px;
     -webkit-box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11); 
     box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.11);
-    padding: 32px 24px 0;
+    padding: 27px 24px 0;
 }
 .user-header {
     display: flex;
@@ -135,10 +143,13 @@ header .light-btn p {
     font-size: 13px;
     color: var(--light-txt-primary);
 }
-/* .user-container p {
-    font-size: 13px;
+.user-bio {
     color: var(--light-txt-primary);
-} */
+    font-size: 13px;
+    max-height: 100px;
+    padding-right: 2px;
+    overflow: auto;
+}
 .follower-div {
     padding: 18px 14px;
     width: 100%;
@@ -161,6 +172,10 @@ header .light-btn p {
     display: flex;
     font-size: 13px;
 }
+.blog {
+    text-decoration: none;
+    color: #000000;
+}
 .user-links svg {
     margin-bottom: 15px;
     margin-right: 15px;
@@ -181,4 +196,112 @@ header .light-btn p {
 }
 .dark-bg-secondary {
     background-color: #1F2A47;
+}
+
+
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) {
+    .main-container {
+        height: 639px;
+        width: 573px;
+    }
+    header {
+        margin-top: 140px;
+        margin-bottom: 35px;
+    }
+    .search-box {
+        margin-bottom: 24px;
+        height: 70px;
+    }
+    .user-container {
+        height: 481px;
+        padding: 40px;
+    }
+    .user-container #avatar img {
+        width: 117px;
+    }
+    .user-container #user-name {
+        font-size: 26px;
+    }
+    .user-container #user-tag {
+        font-size: 16px;
+    }
+    .user-info {
+        justify-content: center;
+    }
+    #user-name {
+        margin-bottom: 6px;
+    }
+    .user-header {
+        margin-bottom: 22px;
+    }
+    #user-bio {
+        margin-bottom: 32px;
+    }
+    .follower-div {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .user-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 70px;
+    }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1440px) {
+    .main-container {
+        width: 730px;
+    }
+    .user-container {
+        height: 419px;
+    }
+    #avatar img {
+        position: absolute;
+    }
+    .user-links,
+    .user-bio,
+    .follower-div{
+        max-width: 480px;
+        margin-left: 160px;
+    }
+    .user-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 141px;
+        width: 100%;
+    }
+    #user-tag {
+        order: 3;
+    }
+    .user-info h3,
+    .user-info a,
+    .user-info p {
+        width: 50%;
+    }
+    #joined {
+        text-align: right;
+    }
+    #search-input {
+        font-size: 18px;
+    }
+    .search-btn:hover {
+        background-color: #60ABFF;
+    }
+    .search-box .no-result {
+        position: absolute;
+        margin-left: 530px;
+        display: none;
+        color: #F74646;
+        font-size: 15px;
+        font-weight: 700;
+        background-color: #FFFFFF;
+        padding: 5px 3px 5px 8px;
+    }
 }
