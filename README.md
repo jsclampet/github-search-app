@@ -6,3 +6,9 @@
 ---
 
 ![image preview](./devfinder_img.png)
+
+---
+
+## Author
+- John Clampet: FullStack Software Developer
+- [LinkedIn](https://www.linkedin.com/in/john-clampet-264007122/)
