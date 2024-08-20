@@ -5,7 +5,8 @@
 
 ---
 
-![image preview](./devfinder_img.png)
+
+[![image preview](./devfinder_img.png)](https://jsclampet.github.io/github-search-app/)
 
 ---
 
